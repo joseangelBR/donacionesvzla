@@ -21,7 +21,7 @@
       "en": "We are an independent aggregator. We are not affiliated with these organizations, we do not receive or handle money, and we take no commission. Each button links directly to the organization's official page. Always verify before donating."
     },
     "reportUrl": "mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema%20-%20Ayuda%20Venezuela",
-    "fullPageUrl": "https://donaciones-vzla.pages.dev/donar.html"
+    "fullPageUrl": "https://donacionesvzla.vzla.workers.dev/donar.html"
   },
   "categories": [
     { "id": "monetary",     "icon": "💜", "label": { "es": "Donación económica", "en": "Money donation" } },

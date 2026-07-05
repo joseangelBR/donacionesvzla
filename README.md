@@ -35,14 +35,14 @@ Sitio del usuario  ──carga──►  widget.js (CDN)  ──fetch──►  
 
 **1. Script universal** (cualquier web):
 ```html
-<script src="https://donaciones-vzla.pages.dev/widget.js" data-lang="es" data-mode="bar" async></script>
+<script src="https://donacionesvzla.vzla.workers.dev/widget.js" data-lang="es" data-mode="bar" async></script>
 ```
 `data-mode`: `bar` (recomendado) · `button` · `popup` · `inline` · `manual`.
 Otros: `data-lang` (es/en), `data-position` (left/right), `data-primary` (#hex), `data-categories`.
 
 **2. iframe** (Wix / restrictivos):
 ```html
-<iframe src="https://donaciones-vzla.pages.dev/embed.html?lang=es"
+<iframe src="https://donacionesvzla.vzla.workers.dev/embed.html?lang=es"
         style="width:100%;max-width:640px;height:640px;border:0" loading="lazy"
         title="Ayuda para Venezuela"></iframe>
 ```

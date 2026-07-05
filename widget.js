@@ -4,7 +4,7 @@
  * NO recibe dinero: solo redirige a las páginas oficiales de cada organización.
  *
  * Uso básico (cualquier web):
- *   <script src="https://donaciones-vzla.pages.dev/widget.js"
+ *   <script src="https://donacionesvzla.vzla.workers.dev/widget.js"
  *           data-lang="es" data-mode="bar" async></script>
  *
  * data-* soportados:
@@ -422,7 +422,7 @@
         en: 'We could not load the list right now. Open the full page to see how to support Venezuela.'
       },
       ctaLabel: { es: 'Ver cómo ayudar', en: 'See how to help' },
-      fullPageUrl: 'https://donaciones-vzla.pages.dev/donar.html'
+      fullPageUrl: 'https://donacionesvzla.vzla.workers.dev/donar.html'
     },
     categories: [],
     organizations: [],

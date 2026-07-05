@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Ayuda Venezuela — Widget de donaciones
- * Plugin URI:        https://donaciones-vzla.pages.dev/
+ * Plugin URI:        https://donacionesvzla.vzla.workers.dev/
  * Description:       Muestra una franja, botón o popup con canales verificados para donar a Venezuela. El listado se actualiza solo desde la nube — no hace falta reinstalar el plugin.
  * Version:           1.0.0
  * Requires at least: 5.8
@@ -18,7 +18,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 define( 'DVZLA_VERSION', '1.0.0' );
-define( 'DVZLA_DEFAULT_HOST', 'https://donaciones-vzla.pages.dev' );
+define( 'DVZLA_DEFAULT_HOST', 'https://donacionesvzla.vzla.workers.dev' );
 
 /**
  * Opciones por defecto.
