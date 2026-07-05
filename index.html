@@ -284,7 +284,8 @@
       }
       function markActive(id){
         ['pv-bar','pv-button','pv-popup','pv-clear'].forEach(function(x){
-          document.getElementById(x).classList.toggle('on', x === id);
+          var b = document.getElementById(x);
+          if (b) b.classList.toggle('on', x === id);
         });
       }
       function preview(mode, id){
@@ -341,10 +342,13 @@
           if (currentPreview) preview(currentPreview, 'pv-' + currentPreview);
         })
         .catch(function(){ /* offline/local: seguimos con los datos de ejemplo */ });
-      document.getElementById('pv-bar').addEventListener('click', function(){ preview('bar','pv-bar'); });
-      document.getElementById('pv-button').addEventListener('click', function(){ preview('button','pv-button'); });
-      document.getElementById('pv-popup').addEventListener('click', function(){ preview('popup','pv-popup'); });
-      document.getElementById('pv-clear').addEventListener('click', function(){
+      // Botones de vista previa (opcionales: solo se enlazan si existen en el HTML).
+      [['pv-bar','bar'],['pv-button','button'],['pv-popup','popup']].forEach(function(p){
+        var b = document.getElementById(p[0]);
+        if (b) b.addEventListener('click', function(){ preview(p[1], p[0]); });
+      });
+      var pvClear = document.getElementById('pv-clear');
+      if (pvClear) pvClear.addEventListener('click', function(){
         currentPreview = null;
         whenReady(function(){ if (window.DonacionesVzla.destroy) window.DonacionesVzla.destroy(); markActive('pv-clear'); });
       });
