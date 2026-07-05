@@ -1,0 +1,46 @@
+{
+  "donar.title": "Für Venezuela spenden — Geprüfte Hilfskanäle",
+  "donar.desc": "Liste geprüfter Kanäle, um für Venezuela nach dem Erdbeben zu spenden und zu helfen. Jeder Link führt direkt zur offiziellen Organisation.",
+  "donar.h1": "💜 Für Venezuela spenden",
+  "donar.p": "Geprüfte Kanäle, um nach dem Erdbeben zu helfen. Jede Schaltfläche führt Sie direkt zur offiziellen Organisation.",
+  "donar.foot.note": "Unabhängiger Aggregator · Wir verwalten kein Geld und erheben keine Provision",
+  "donar.foot.report": "Ein Problem melden",
+  "donar.foot.add": "Dieses Widget zu Ihrer Website hinzufügen",
+
+  "head.title": "Venezuela helfen — Spenden-Widget für Ihre Website",
+  "head.desc": "Fügen Sie Ihrer Website (WordPress, Wix oder HTML) eine Leiste oder ein Popup mit geprüften Kanälen hinzu, um für Venezuela zu spenden. Kostenlos, leicht und ohne Neuinstallation aktualisierbar.",
+  "hero.h1": "💜 Ihre Website kann helfen, Leben in Venezuela zu retten",
+  "hero.p": "Tausende Familien haben nach dem Erdbeben alles verloren. Jeder, der Ihre Seite besucht, möchte helfen, weiß aber nicht, wo er das sicher tun kann. <b>Sie können es ihm zeigen.</b> Fügen Sie eine dezente Leiste mit <b>geprüften</b> Spendenkanälen hinzu: Es dauert 2 Minuten, ist <b>völlig kostenlos</b> und nimmt Ihrer Website nichts weg… aber für jemanden in Venezuela kann es alles bedeuten.",
+  "hero.cta": "Ich möchte von meiner Website aus helfen",
+  "hero.alt": "Die Spendenliste ansehen",
+
+  "como.h2": "Wie funktioniert es?",
+  "como.lead": "Sie installieren einmalig einen kleinen Code. Die Liste der Organisationen liegt in der Cloud (eine <code class=\"inline\">config.json</code>-Datei) und wird für alle gleichzeitig aktualisiert.",
+  "como.c1.t": "1. Format wählen",
+  "como.c1.d": "WordPress-Plugin, Code für Wix, iframe oder ein einfaches <code class=\"inline\">&lt;script&gt;</code> für jede Website.",
+  "como.c2.t": "2. Code einfügen",
+  "como.c2.d": "Unten erscheint eine dezente Leiste (oder ein Button / Popup, Ihre Wahl). Sie blockiert Ihre Inhalte nicht.",
+  "como.c3.t": "3. Fertig und immer aktuell",
+  "como.c3.d": "Wenn neue Hilfskanäle geprüft werden, aktualisiert sich Ihr Widget von selbst. Sie müssen nichts tun.",
+
+  "gen.h2": "Erstellen Sie Ihren Code",
+  "gen.lead": "Anpassen und kopieren. Funktioniert auf jeder HTML-Website und auf Wix mit einem Code-Block.",
+
+  "wp.h2": "Auf WordPress installieren",
+  "wp.lead": "Mit Einstellungsbereich, Gutenberg-Block und Shortcode.",
+
+  "wix.h2": "Auf Wix installieren",
+
+  "sop.h2": "Brauchen Sie Hilfe bei der Installation?",
+  "sop.lead": "Installation und Support sind <b>völlig kostenlos, ohne jegliche Kosten</b>. Wenn Sie Fragen zur Platzierung des Widgets auf Ihrer Website haben, schreiben Sie mir und ich helfe Ihnen gern.",
+  "sop.btn": "✉ Per E-Mail schreiben",
+
+  "conf.h2": "Transparenz",
+  "conf.lead": "Dieses Projekt ist ein unabhängiger Aggregator. <b>Wir nehmen kein Geld ein und verwalten keines</b> und erheben keine Provision: Jede Schaltfläche führt direkt zur offiziellen Seite der Organisation. Wir prüfen jeden Kanal, bevor wir ihn auflisten, und geben die Quelle an. Sehen Sie einen verdächtigen oder toten Link? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Melden Sie ihn hier</a>.",
+
+  "foot.opensource": "Open Source · Inhalt in <code class=\"inline\">config.json</code>",
+  "foot.list": "Vollständige Liste",
+  "foot.made": "Gemacht, um Venezuela zu helfen 💜",
+  "foot.by": "Website entwickelt von",
+  "foot.support": "Kostenloser Support:"
+}

@@ -10,6 +10,7 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       donaciones-vzla
+ * Domain Path:       /languages
  *
  * El widget NO recibe dinero: solo redirige a las páginas oficiales de cada organización.
  * El contenido vive en config.json (remoto). Este plugin es solo el "cascarón".
@@ -20,6 +21,17 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 define( 'DVZLA_VERSION', '1.0.0' );
 define( 'DVZLA_DEFAULT_HOST', 'https://donacionesvzla.vzla.workers.dev' );
 
+// Idiomas soportados por el widget (deben coincidir con widget.js y config.json).
+define( 'DVZLA_LANGS', array( 'es', 'en', 'pt', 'fr', 'it', 'de' ) );
+
+/**
+ * Carga las traducciones del panel de administración (.mo en /languages).
+ */
+function dvzla_load_textdomain() {
+	load_plugin_textdomain( 'donaciones-vzla', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'dvzla_load_textdomain' );
+
 /**
  * Opciones por defecto.
  */
@@ -28,7 +40,7 @@ function dvzla_defaults() {
 		'enabled'  => 1,
 		'host'     => DVZLA_DEFAULT_HOST,
 		'mode'     => 'bar',      // bar | button | popup
-		'lang'     => 'es',       // es | en
+		'lang'     => 'es',       // es | en | pt | fr | it | de
 		'position' => 'right',    // left | right (mode=button)
 		'primary'  => '#7c3aed',
 		'orgs'     => '',         // allowlist opcional: IDs separados por coma (vacío = todas)
@@ -187,7 +199,7 @@ function dvzla_sanitize( $in ) {
 	$out['enabled']  = empty( $in['enabled'] ) ? 0 : 1;
 	$out['host']     = ! empty( $in['host'] ) ? esc_url_raw( trim( $in['host'] ) ) : $d['host'];
 	$out['mode']     = in_array( $in['mode'] ?? '', array( 'bar', 'button', 'popup' ), true ) ? $in['mode'] : $d['mode'];
-	$out['lang']     = in_array( $in['lang'] ?? '', array( 'es', 'en' ), true ) ? $in['lang'] : $d['lang'];
+	$out['lang']     = in_array( $in['lang'] ?? '', DVZLA_LANGS, true ) ? $in['lang'] : $d['lang'];
 	$out['position'] = in_array( $in['position'] ?? '', array( 'left', 'right' ), true ) ? $in['position'] : $d['position'];
 	$color           = sanitize_hex_color( $in['primary'] ?? '' );
 	$out['primary']  = $color ? $color : $d['primary'];
@@ -228,6 +240,10 @@ function dvzla_settings_page() {
 						<select name="dvzla_options[lang]">
 							<option value="es" <?php selected( $o['lang'], 'es' ); ?>>Español</option>
 							<option value="en" <?php selected( $o['lang'], 'en' ); ?>>English</option>
+							<option value="pt" <?php selected( $o['lang'], 'pt' ); ?>>Português</option>
+							<option value="fr" <?php selected( $o['lang'], 'fr' ); ?>>Français</option>
+							<option value="it" <?php selected( $o['lang'], 'it' ); ?>>Italiano</option>
+							<option value="de" <?php selected( $o['lang'], 'de' ); ?>>Deutsch</option>
 						</select>
 					</td>
 				</tr>

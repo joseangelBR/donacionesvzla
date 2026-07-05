@@ -1,0 +1,99 @@
+# Plantilla de traduccion del plugin "Ayuda Venezuela".
+# Copyright (C) 2026
+# Distribuido bajo licencia GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ayuda Venezuela 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: donaciones-vzla\n"
+
+msgid "Ayuda Venezuela"
+msgstr ""
+
+msgid "Muestra canales verificados para donar a Venezuela. El listado se actualiza solo desde la nube: no necesitas actualizar este plugin cuando cambien las organizaciones."
+msgstr ""
+
+msgid "Mostrar en el sitio"
+msgstr ""
+
+msgid "Activar el widget en todas las páginas"
+msgstr ""
+
+msgid "Cómo se muestra"
+msgstr ""
+
+msgid "Franja fija abajo (recomendado)"
+msgstr ""
+
+msgid "Botón flotante lateral"
+msgstr ""
+
+msgid "Popup al entrar"
+msgstr ""
+
+msgid "Idioma"
+msgstr ""
+
+msgid "Posición del botón"
+msgstr ""
+
+msgid "Derecha"
+msgstr ""
+
+msgid "Izquierda"
+msgstr ""
+
+msgid "Solo aplica al modo “botón flotante”."
+msgstr ""
+
+msgid "Color principal"
+msgstr ""
+
+msgid "Organizaciones a mostrar"
+msgstr ""
+
+msgid "vacío = todas"
+msgstr ""
+
+msgid "Opcional. IDs separados por coma para mostrar solo esas organizaciones. Vacío = mostrar todas (se mantiene actualizado). Los IDs están en el archivo config.json."
+msgstr ""
+
+msgid "Origen del contenido"
+msgstr ""
+
+msgid "URL base donde están widget.js y config.json. Déjalo por defecto salvo que alojes tu propia copia."
+msgstr ""
+
+msgid "Insertar en una entrada o página"
+msgstr ""
+
+msgid "Usa el bloque “Ayuda Venezuela” o el shortcode:"
+msgstr ""
+
+msgid "Transparencia: este plugin no recibe ni gestiona dinero. Cada botón enlaza directo a la organización oficial."
+msgstr ""
+
+msgid "Listado de canales verificados para donar a Venezuela."
+msgstr ""
+
+msgid "Ajustes"
+msgstr ""
+
+msgid "Según ajustes"
+msgstr ""
+
+msgid "Categorías (opcional, separadas por coma)"
+msgstr ""
+
+msgid "Organizaciones (opcional, IDs separados por coma)"
+msgstr ""
+
+msgid "Vacío = todas. Los IDs están en config.json."
+msgstr ""
+
+msgid "Ayuda Venezuela — el listado se mostrará aquí en el sitio publicado."
+msgstr ""
+

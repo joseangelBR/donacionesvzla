@@ -6,28 +6,44 @@
   "meta": {
     "eventTitle": {
       "es": "Cada aporte suma",
-      "en": "Every bit counts"
+      "en": "Every bit counts",
+      "pt": "Cada contribuição conta",
+      "fr": "Chaque don compte",
+      "it": "Ogni contributo conta",
+      "de": "Jeder Beitrag zählt"
     },
     "eventSubtitle": {
       "es": "Conoce cómo puedes apoyar a Venezuela tras el terremoto. Juntos podemos hacer la diferencia.",
-      "en": "Find out how you can support Venezuela after the earthquake. Together we can make a difference."
+      "en": "Find out how you can support Venezuela after the earthquake. Together we can make a difference.",
+      "pt": "Descubra como você pode apoiar a Venezuela após o terremoto. Juntos podemos fazer a diferença.",
+      "fr": "Découvrez comment soutenir le Venezuela après le séisme. Ensemble, nous pouvons faire la différence.",
+      "it": "Scopri come puoi sostenere il Venezuela dopo il terremoto. Insieme possiamo fare la differenza.",
+      "de": "Erfahren Sie, wie Sie Venezuela nach dem Erdbeben unterstützen können. Gemeinsam können wir etwas bewegen."
     },
     "ctaLabel": {
       "es": "Quiero ayudar",
-      "en": "I want to help"
+      "en": "I want to help",
+      "pt": "Quero ajudar",
+      "fr": "Je veux aider",
+      "it": "Voglio aiutare",
+      "de": "Ich möchte helfen"
     },
     "disclaimer": {
       "es": "Somos un agregador independiente. No estamos afiliados a estas organizaciones, no recibimos ni gestionamos dinero y no cobramos comisión. Cada botón te lleva directo a la página oficial de la organización. Verifica siempre antes de donar.",
-      "en": "We are an independent aggregator. We are not affiliated with these organizations, we do not receive or handle money, and we take no commission. Each button links directly to the organization's official page. Always verify before donating."
+      "en": "We are an independent aggregator. We are not affiliated with these organizations, we do not receive or handle money, and we take no commission. Each button links directly to the organization's official page. Always verify before donating.",
+      "pt": "Somos um agregador independente. Não temos vínculo com estas organizações, não recebemos nem administramos dinheiro e não cobramos comissão. Cada botão leva você diretamente à página oficial da organização. Verifique sempre antes de doar.",
+      "fr": "Nous sommes un agrégateur indépendant. Nous ne sommes pas affiliés à ces organisations, nous ne recevons ni ne gérons d'argent et ne prélevons aucune commission. Chaque bouton vous mène directement à la page officielle de l'organisation. Vérifiez toujours avant de faire un don.",
+      "it": "Siamo un aggregatore indipendente. Non siamo affiliati a queste organizzazioni, non riceviamo né gestiamo denaro e non applichiamo commissioni. Ogni pulsante ti porta direttamente alla pagina ufficiale dell'organizzazione. Verifica sempre prima di donare.",
+      "de": "Wir sind ein unabhängiger Aggregator. Wir sind nicht mit diesen Organisationen verbunden, nehmen kein Geld ein oder verwalten es und erheben keine Provision. Jede Schaltfläche führt Sie direkt zur offiziellen Seite der Organisation. Prüfen Sie immer, bevor Sie spenden."
     },
     "reportUrl": "mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema%20-%20Ayuda%20Venezuela",
     "fullPageUrl": "https://donacionesvzla.vzla.workers.dev/donar.html"
   },
   "categories": [
-    { "id": "monetary",     "icon": "💜", "label": { "es": "Donación económica", "en": "Money donation" } },
-    { "id": "inkind",       "icon": "📦", "label": { "es": "Insumos y ayuda material", "en": "Supplies & in-kind" } },
-    { "id": "crowdfunding", "icon": "🤝", "label": { "es": "Recaudaciones verificadas", "en": "Verified fundraisers" } },
-    { "id": "volunteer",    "icon": "🙋", "label": { "es": "Voluntariado", "en": "Volunteer" } }
+    { "id": "monetary",     "icon": "💜", "label": { "es": "Donación económica", "en": "Money donation", "pt": "Doação em dinheiro", "fr": "Don financier", "it": "Donazione in denaro", "de": "Geldspende" } },
+    { "id": "inkind",       "icon": "📦", "label": { "es": "Insumos y ayuda material", "en": "Supplies & in-kind", "pt": "Insumos e ajuda material", "fr": "Fournitures et aide matérielle", "it": "Forniture e aiuti materiali", "de": "Sachspenden & Hilfsgüter" } },
+    { "id": "crowdfunding", "icon": "🤝", "label": { "es": "Recaudaciones verificadas", "en": "Verified fundraisers", "pt": "Arrecadações verificadas", "fr": "Collectes vérifiées", "it": "Raccolte fondi verificate", "de": "Verifizierte Spendenaktionen" } },
+    { "id": "volunteer",    "icon": "🙋", "label": { "es": "Voluntariado", "en": "Volunteer", "pt": "Voluntariado", "fr": "Bénévolat", "it": "Volontariato", "de": "Freiwilligenarbeit" } }
   ],
   "organizations": [
     {

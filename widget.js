@@ -68,6 +68,21 @@
     if (!obj) return '';
     return obj[lang] || obj.es || obj.en || '';
   }
+  // Textos de la interfaz del widget. Añadir un idioma = añadir su clave.
+  // Si falta una traducción, tr() cae al español automáticamente.
+  var UI = {
+    close:      { es: 'Cerrar', en: 'Close', pt: 'Fechar', fr: 'Fermer', it: 'Chiudi', de: 'Schließen' },
+    source:     { es: 'fuente', en: 'source', pt: 'fonte', fr: 'source', it: 'fonte', de: 'Quelle' },
+    verified:   { es: 'Verificado', en: 'Verified', pt: 'Verificado', fr: 'Vérifié', it: 'Verificato', de: 'Verifiziert' },
+    unverified: { es: 'Sin verificar', en: 'Unverified', pt: 'Não verificado', fr: 'Non vérifié', it: 'Non verificato', de: 'Nicht verifiziert' },
+    donate:     { es: 'Donar', en: 'Donate', pt: 'Doar', fr: 'Faire un don', it: 'Dona', de: 'Spenden' },
+    more:       { es: 'Ver más organizaciones →', en: 'See more organizations →', pt: 'Ver mais organizações →', fr: 'Voir plus d\'organisations →', it: 'Vedi altre organizzazioni →', de: 'Weitere Organisationen ansehen →' },
+    report:     { es: 'Reportar un problema', en: 'Report a problem', pt: 'Relatar um problema', fr: 'Signaler un problème', it: 'Segnala un problema', de: 'Ein Problem melden' },
+    updated:    { es: 'Actualizado: ', en: 'Updated: ', pt: 'Atualizado: ', fr: 'Mis à jour : ', it: 'Aggiornato: ', de: 'Aktualisiert: ' },
+    help:       { es: 'Ayudar', en: 'Help', pt: 'Ajudar', fr: 'Aider', it: 'Aiuta', de: 'Helfen' },
+    seeHow:     { es: 'Ver cómo ayudar', en: 'See how to help', pt: 'Veja como ajudar', fr: 'Voir comment aider', it: 'Scopri come aiutare', de: 'So können Sie helfen' }
+  };
+  function tr(key, lang) { var o = UI[key]; return o ? (o[lang] || o.es) : ''; }
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
     if (attrs) {
@@ -215,7 +230,7 @@
     });
 
     var head = el('div', { class: 'hd' }, [
-      inline ? null : el('button', { class: 'x', 'aria-label': lang === 'en' ? 'Close' : 'Cerrar', text: '×', onclick: onClose }),
+      inline ? null : el('button', { class: 'x', 'aria-label': tr('close', lang), text: '×', onclick: onClose }),
       el('h2', {}, [flagNode(), document.createTextNode(t(meta.eventTitle, lang) || 'Ayuda para Venezuela')]),
       meta.eventSubtitle ? el('p', { text: t(meta.eventSubtitle, lang) }) : null
     ]);
@@ -238,11 +253,11 @@
         if (o.region) meta2.push(el('span', { text: o.region }));
         if (o.verifiedSource) {
           meta2.push(el('a', { href: o.verifiedSource, target: '_blank', rel: 'noopener noreferrer',
-            text: lang === 'en' ? 'source' : 'fuente' }));
+            text: tr('source', lang) }));
         }
         var badge = o.verified
-          ? el('span', { class: 'badge', text: lang === 'en' ? 'Verified' : 'Verificado' })
-          : el('span', { class: 'badge warn', text: lang === 'en' ? 'Unverified' : 'Sin verificar' });
+          ? el('span', { class: 'badge', text: tr('verified', lang) })
+          : el('span', { class: 'badge warn', text: tr('unverified', lang) });
 
         section.appendChild(el('div', { class: 'org' }, [
           el('div', { class: 'info' }, [
@@ -252,7 +267,7 @@
           ]),
           el('a', {
             class: 'go', href: o.url || '#', target: '_blank', rel: 'noopener noreferrer',
-            text: lang === 'en' ? 'Donate' : 'Donar'
+            text: tr('donate', lang)
           })
         ]));
       });
@@ -264,17 +279,17 @@
     if (!inline && meta.fullPageUrl) {
       body.appendChild(el('a', {
         class: 'more', href: meta.fullPageUrl, target: '_blank', rel: 'noopener',
-        text: lang === 'en' ? 'See more organizations →' : 'Ver más organizaciones →'
+        text: tr('more', lang)
       }));
     }
 
     var ftLinks = [];
     if (meta.reportUrl) {
       ftLinks.push(el('a', { href: meta.reportUrl,
-        text: lang === 'en' ? 'Report a problem' : 'Reportar un problema' }));
+        text: tr('report', lang) }));
     }
     var ft = el('div', { class: 'ft' }, [
-      el('span', { text: (lang === 'en' ? 'Updated: ' : 'Actualizado: ') + (cfg.lastUpdated || '') }),
+      el('span', { text: tr('updated', lang) + (cfg.lastUpdated || '') }),
       el('span', {}, ftLinks)
     ]);
 
@@ -386,7 +401,7 @@
       wrap.appendChild(el('button', {
         class: 'fab ' + (opts.position === 'left' ? 'left' : 'right'),
         onclick: function () { openModal(wrap, cfg, lang, preview); }
-      }, [flagNode(), document.createTextNode(t(meta.ctaLabel, lang) || (lang === 'en' ? 'Help' : 'Ayudar'))]));
+      }, [flagNode(), document.createTextNode(t(meta.ctaLabel, lang) || tr('help', lang))]));
       return;
     }
 
@@ -398,9 +413,9 @@
         document.createTextNode(t(meta.eventSubtitle, lang))
       ]),
       el('button', { class: 'cta',
-        text: t(meta.ctaLabel, lang) || (lang === 'en' ? 'See how to help' : 'Ver cómo ayudar'),
+        text: t(meta.ctaLabel, lang) || tr('seeHow', lang),
         onclick: function () { openModal(wrap, cfg, lang, preview); } }),
-      el('button', { class: 'x', 'aria-label': lang === 'en' ? 'Close' : 'Cerrar', text: '×',
+      el('button', { class: 'x', 'aria-label': tr('close', lang), text: '×',
         onclick: function () {
           bar.classList.add('closing');
           setTimeout(function () { bar.remove(); }, 260);

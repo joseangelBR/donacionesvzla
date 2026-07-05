@@ -1,0 +1,46 @@
+{
+  "donar.title": "Doe para a Venezuela — Canais de ajuda verificados",
+  "donar.desc": "Lista de canais verificados para doar e ajudar a Venezuela após o terremoto. Cada link leva diretamente à organização oficial.",
+  "donar.h1": "💜 Doe para a Venezuela",
+  "donar.p": "Canais verificados para ajudar após o terremoto. Cada botão leva você diretamente à organização oficial.",
+  "donar.foot.note": "Agregador independente · Não administramos dinheiro nem cobramos comissão",
+  "donar.foot.report": "Relatar um problema",
+  "donar.foot.add": "Adicione este widget ao seu site",
+
+  "head.title": "Ajude a Venezuela — Widget de doações para o seu site",
+  "head.desc": "Adicione ao seu site (WordPress, Wix ou HTML) uma faixa ou popup com canais verificados para doar à Venezuela. Grátis, leve e atualizável sem reinstalar.",
+  "hero.h1": "💜 O seu site pode ajudar a salvar vidas na Venezuela",
+  "hero.p": "Milhares de famílias perderam tudo após o terremoto. Cada pessoa que visita a sua página quer ajudar, mas não sabe onde fazê-lo com segurança. <b>Você pode mostrar a ela.</b> Adicione uma faixa discreta com canais <b>verificados</b> para doar: leva 2 minutos, é <b>totalmente grátis</b> e não tira nada do seu site… mas para alguém na Venezuela pode significar tudo.",
+  "hero.cta": "Quero ajudar a partir do meu site",
+  "hero.alt": "Ver a lista de doações",
+
+  "como.h2": "Como funciona?",
+  "como.lead": "Você instala um pequeno código uma única vez. A lista de organizações vive na nuvem (um arquivo <code class=\"inline\">config.json</code>) e é atualizada para todos ao mesmo tempo.",
+  "como.c1.t": "1. Escolha o formato",
+  "como.c1.d": "Plugin de WordPress, código para Wix, iframe ou um simples <code class=\"inline\">&lt;script&gt;</code> para qualquer site.",
+  "como.c2.t": "2. Cole o código",
+  "como.c2.d": "Aparece uma faixa discreta embaixo (ou um botão / popup, você escolhe). Não bloqueia o seu conteúdo.",
+  "como.c3.t": "3. Pronto e sempre atualizado",
+  "como.c3.d": "Quando novos canais de ajuda são verificados, o seu widget se atualiza sozinho. Você não precisa mexer em nada.",
+
+  "gen.h2": "Gere o seu código",
+  "gen.lead": "Personalize e copie. Funciona em qualquer site HTML e no Wix com um bloco de código.",
+
+  "wp.h2": "Instalar no WordPress",
+  "wp.lead": "Com painel de configurações, bloco Gutenberg e shortcode.",
+
+  "wix.h2": "Instalar no Wix",
+
+  "sop.h2": "Precisa de ajuda para instalar?",
+  "sop.lead": "A instalação e o suporte são <b>totalmente gratuitos, sem custo algum</b>. Se tiver dúvidas para colocar o widget no seu site, escreva para mim e eu ajudo com prazer.",
+  "sop.btn": "✉ Escrever por e-mail",
+
+  "conf.h2": "Transparência",
+  "conf.lead": "Este projeto é um agregador independente. <b>Não recebemos nem administramos dinheiro</b> e não cobramos comissão: cada botão leva diretamente à página oficial da organização. Verificamos cada canal antes de listá-lo e mostramos a fonte. Viu um link suspeito ou fora do ar? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Relate aqui</a>.",
+
+  "foot.opensource": "Código aberto · Conteúdo em <code class=\"inline\">config.json</code>",
+  "foot.list": "Lista completa",
+  "foot.made": "Feito para ajudar a Venezuela 💜",
+  "foot.by": "Site desenvolvido por",
+  "foot.support": "Suporte gratuito:"
+}

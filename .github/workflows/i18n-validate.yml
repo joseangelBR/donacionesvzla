@@ -1,0 +1,47 @@
+name: Validar traducciones
+
+on:
+  push:
+    paths: ['i18n/**', 'config.json', '.github/workflows/i18n-validate.yml']
+  pull_request:
+    paths: ['i18n/**', 'config.json']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validar JSON y paridad de claves (i18n/ y config.json)
+        run: |
+          node -e '
+            const fs = require("fs");
+
+            // --- 1) Páginas: todos los i18n/<lang>.json deben tener las claves de es.json ---
+            const dir = "i18n";
+            const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+            const base = Object.keys(JSON.parse(fs.readFileSync(dir + "/es.json", "utf8")))
+              .filter(k => k !== "_comment").sort();
+            let ok = true;
+            for (const f of files) {
+              let d;
+              try { d = JSON.parse(fs.readFileSync(dir + "/" + f, "utf8")); }
+              catch (e) { console.error("❌ " + f + " no es JSON válido: " + e.message); ok = false; continue; }
+              const keys = Object.keys(d).filter(k => k !== "_comment").sort();
+              const missing = base.filter(k => !keys.includes(k));
+              const extra = keys.filter(k => !base.includes(k));
+              if (missing.length || extra.length) {
+                ok = false;
+                console.error("❌ " + f + (missing.length ? "  faltan: " + missing.join(", ") : "") + (extra.length ? "  sobran: " + extra.join(", ") : ""));
+              } else {
+                console.log("✅ " + f + " (" + keys.length + " claves)");
+              }
+            }
+
+            // --- 2) config.json: debe ser JSON válido ---
+            try { JSON.parse(fs.readFileSync("config.json", "utf8")); console.log("✅ config.json válido"); }
+            catch (e) { console.error("❌ config.json inválido: " + e.message); ok = false; }
+
+            if (!ok) { console.error("\nHay traducciones con claves incompletas."); process.exit(1); }
+            console.log("\nTodo correcto.");
+          '

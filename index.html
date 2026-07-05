@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ayuda para Venezuela — Widget de donaciones para tu web</title>
-  <meta name="description" content="Añade a tu sitio (WordPress, Wix o HTML) una franja o popup con canales verificados para donar a Venezuela. Gratis, ligero y actualizable sin reinstalar.">
+  <title data-i18n="head.title">Ayuda para Venezuela — Widget de donaciones para tu web</title>
+  <meta name="description" data-i18n-attr="content:head.desc" content="Añade a tu sitio (WordPress, Wix o HTML) una franja o popup con canales verificados para donar a Venezuela. Gratis, ligero y actualizable sin reinstalar.">
   <style>
     :root{--p:#7c3aed;--pt:#fff;--ink:#1f2937;--mut:#6b7280;--line:#e5e7eb;--bg:#f8fafc}
     *{box-sizing:border-box}
@@ -40,35 +40,40 @@
     .note{background:#fffbeb;border:1px solid #fcd34d;color:#92400e;padding:12px 14px;border-radius:10px;font-size:14px}
     footer{padding:32px 0 100px;color:var(--mut);font-size:13px;text-align:center}
     footer a{color:var(--p)}
+    .lang{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:22px 0 0}
+    .dv-lang-btn{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55);
+      border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;cursor:pointer}
+    .dv-lang-btn.on{background:#fff;color:var(--p)}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <h1>💜 Tu web puede ayudar a salvar vidas en Venezuela</h1>
-      <p>Miles de familias lo perdieron todo tras el terremoto. Cada persona que visita tu página
+      <h1 data-i18n="hero.h1">💜 Tu web puede ayudar a salvar vidas en Venezuela</h1>
+      <p data-i18n-html="hero.p">Miles de familias lo perdieron todo tras el terremoto. Cada persona que visita tu página
          quiere ayudar, pero no sabe dónde hacerlo de forma segura. <b>Tú puedes mostrárselo.</b>
          Añade una franja discreta con canales <b>verificados</b> para donar: te toma 2 minutos,
          es <b>totalmente gratis</b> y no le resta nada a tu sitio… pero para alguien en Venezuela
          puede significarlo todo.</p>
       <div class="btns">
-        <a class="btn" href="#instalar">Quiero ayudar desde mi web</a>
-        <a class="btn alt" href="donar.html" target="_blank">Ver el listado de donaciones</a>
+        <a class="btn" href="#instalar" data-i18n="hero.cta">Quiero ayudar desde mi web</a>
+        <a class="btn alt" href="donar.html" target="_blank" data-i18n="hero.alt">Ver el listado de donaciones</a>
       </div>
+      <div class="lang" data-lang-switcher></div>
     </div>
   </header>
 
   <section id="como">
     <div class="wrap">
-      <h2>¿Cómo funciona?</h2>
-      <p class="lead">Instalas un pequeño código una sola vez. El listado de organizaciones vive en la
+      <h2 data-i18n="como.h2">¿Cómo funciona?</h2>
+      <p class="lead" data-i18n-html="como.lead">Instalas un pequeño código una sola vez. El listado de organizaciones vive en la
         nube (un archivo <code class="inline">config.json</code>) y se actualiza para todos a la vez.</p>
       <div class="grid">
-        <div class="card"><h3>1. Elige el formato</h3><p>Plugin de WordPress, código para Wix, iframe o un
+        <div class="card"><h3 data-i18n="como.c1.t">1. Elige el formato</h3><p data-i18n-html="como.c1.d">Plugin de WordPress, código para Wix, iframe o un
           simple <code class="inline">&lt;script&gt;</code> para cualquier web.</p></div>
-        <div class="card"><h3>2. Pega el código</h3><p>Aparece una franja discreta abajo (o un botón / popup,
+        <div class="card"><h3 data-i18n="como.c2.t">2. Pega el código</h3><p data-i18n="como.c2.d">Aparece una franja discreta abajo (o un botón / popup,
           tú eliges). No bloquea tu contenido.</p></div>
-        <div class="card"><h3>3. Listo y siempre al día</h3><p>Cuando se verifican nuevos canales de ayuda,
+        <div class="card"><h3 data-i18n="como.c3.t">3. Listo y siempre al día</h3><p data-i18n="como.c3.d">Cuando se verifican nuevos canales de ayuda,
           tu widget se actualiza solo. No tienes que tocar nada.</p></div>
       </div>
     </div>
@@ -76,8 +81,8 @@
 
   <section id="instalar">
     <div class="wrap">
-      <h2>Genera tu código</h2>
-      <p class="lead">Personaliza y copia. Funciona en cualquier sitio HTML, y en Wix con bloque de código.</p>
+      <h2 data-i18n="gen.h2">Genera tu código</h2>
+      <p class="lead" data-i18n="gen.lead">Personaliza y copia. Funciona en cualquier sitio HTML, y en Wix con bloque de código.</p>
 
       <div class="row">
         <div>
@@ -90,7 +95,7 @@
         </div>
         <div>
           <label for="lang">Idioma</label>
-          <select id="lang"><option value="es">Español</option><option value="en">English</option></select>
+          <select id="lang"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option><option value="de">Deutsch</option></select>
         </div>
         <div>
           <label for="position">Posición (botón)</label>
@@ -126,8 +131,8 @@
 
   <section id="instalar-wordpress">
     <div class="wrap">
-      <h2>Instalar en WordPress</h2>
-      <p class="lead">Con panel de ajustes, bloque de Gutenberg y shortcode.</p>
+      <h2 data-i18n="wp.h2">Instalar en WordPress</h2>
+      <p class="lead" data-i18n="wp.lead">Con panel de ajustes, bloque de Gutenberg y shortcode.</p>
       <p><a class="btn" style="background:var(--p);color:#fff" href="donaciones-vzla.zip">⬇ Descargar plugin (.zip)</a></p>
       <ol>
         <li>Descarga el <code class="inline">.zip</code> del plugin.</li>
@@ -143,7 +148,7 @@
 
   <section id="instalar-wix">
     <div class="wrap">
-      <h2>Instalar en Wix</h2>
+      <h2 data-i18n="wix.h2">Instalar en Wix</h2>
       <ol>
         <li>Edita tu sitio → <b>Añadir (+) → Insertar → Insertar HTML</b> (Embed HTML).</li>
         <li>Elige <b>“Código”</b> y pega el <b>Script universal</b> del generador de arriba.
@@ -155,11 +160,11 @@
 
   <section id="soporte">
     <div class="wrap">
-      <h2>¿Necesitas ayuda para instalarlo?</h2>
-      <p class="lead">La instalación y el soporte son <b>totalmente gratuitos, sin costo alguno</b>. Si tienes
+      <h2 data-i18n="sop.h2">¿Necesitas ayuda para instalarlo?</h2>
+      <p class="lead" data-i18n-html="sop.lead">La instalación y el soporte son <b>totalmente gratuitos, sin costo alguno</b>. Si tienes
         dudas para colocar el widget en tu web, escríbeme y te ayudo con gusto.</p>
       <div class="btns" style="justify-content:flex-start">
-        <a class="btn" style="background:var(--p);color:#fff"
+        <a class="btn" style="background:var(--p);color:#fff" data-i18n="sop.btn"
            href="mailto:Jbdevsolutions035@gmail.com?subject=Ayuda%20con%20la%20instalaci%C3%B3n%20-%20Ayuda%20Venezuela">✉ Escribir al correo</a>
       </div>
 
@@ -167,8 +172,8 @@
 
   <section id="confianza">
     <div class="wrap">
-      <h2>Transparencia</h2>
-      <p class="lead">Este proyecto es un agregador independiente. <b>No recibimos ni gestionamos dinero</b> y
+      <h2 data-i18n="conf.h2">Transparencia</h2>
+      <p class="lead" data-i18n-html="conf.lead">Este proyecto es un agregador independiente. <b>No recibimos ni gestionamos dinero</b> y
         no cobramos comisión: cada botón lleva directo a la página oficial de la organización. Verificamos
         cada canal antes de listarlo y mostramos la fuente. ¿Ves un enlace dudoso o caído?
         <a href="mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema">Repórtalo aquí</a>.</p>
@@ -177,18 +182,20 @@
 
   <footer>
     <div class="wrap">
-      Código abierto · Contenido en <code class="inline">config.json</code> ·
-      <a href="donar.html">Listado completo</a> ·
-      Hecho para ayudar a Venezuela 💜
+      <span data-i18n-html="foot.opensource">Código abierto · Contenido en <code class="inline">config.json</code></span> ·
+      <a href="donar.html" data-i18n="foot.list">Listado completo</a> ·
+      <span data-i18n="foot.made">Hecho para ayudar a Venezuela 💜</span>
       <br><br>
-      Sitio desarrollado por <b>Ing. Joseangel Bolívar</b>
+      <span data-i18n="foot.by">Sitio desarrollado por</span> <b>Ing. Joseangel Bolívar</b>
       <a href="https://ve.linkedin.com/in/joseangel-bolivar-649b382a5" target="_blank" rel="noopener">LinkedIn</a> ·
-      Soporte gratuito: <a href="mailto:Jbdevsolutions035@gmail.com">Jbdevsolutions035@gmail.com</a>
+      <span data-i18n="foot.support">Soporte gratuito:</span> <a href="mailto:Jbdevsolutions035@gmail.com">Jbdevsolutions035@gmail.com</a>
     </div>
   </footer>
 
   <!-- Widget en modo manual: la vista previa lo monta bajo demanda -->
   <script src="widget.js" data-mode="manual"></script>
+  <!-- Traducción de la página + selector de idioma (carga solo el idioma activo) -->
+  <script src="i18n.js"></script>
 
   <script>
     (function () {

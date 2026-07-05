@@ -35,7 +35,11 @@
 							options: [
 								{ label: __( 'Según ajustes', 'donaciones-vzla' ), value: '' },
 								{ label: 'Español', value: 'es' },
-								{ label: 'English', value: 'en' }
+								{ label: 'English', value: 'en' },
+								{ label: 'Português', value: 'pt' },
+								{ label: 'Français', value: 'fr' },
+								{ label: 'Italiano', value: 'it' },
+								{ label: 'Deutsch', value: 'de' }
 							],
 							onChange: function ( v ) { props.setAttributes( { lang: v } ); }
 						} ),
