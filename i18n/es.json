@@ -1,6 +1,5 @@
 {
   "_comment": "IDIOMA FUENTE (referencia). El español va inline en el HTML, así que este archivo NO se carga en runtime: sirve de base para traducir los demás y para validar claves. No borrar claves; para traducir, copia este archivo a <idioma>.json y traduce solo los valores.",
-
   "donar.title": "Donar a Venezuela — Canales verificados de ayuda",
   "donar.desc": "Listado de canales verificados para donar y colaborar con Venezuela tras el terremoto. Cada enlace lleva directo a la organización oficial.",
   "donar.h1": "💜 Donar a Venezuela",
@@ -8,14 +7,12 @@
   "donar.foot.note": "Agregador independiente · No gestionamos dinero ni cobramos comisión",
   "donar.foot.report": "Reportar un problema",
   "donar.foot.add": "Añadir este widget a tu web",
-
   "head.title": "Ayuda para Venezuela — Widget de donaciones para tu web",
   "head.desc": "Añade a tu sitio (WordPress, Wix o HTML) una franja o popup con canales verificados para donar a Venezuela. Gratis, ligero y actualizable sin reinstalar.",
   "hero.h1": "💜 Tu web puede ayudar a salvar vidas en Venezuela",
   "hero.p": "Miles de familias lo perdieron todo tras el terremoto. Cada persona que visita tu página quiere ayudar, pero no sabe dónde hacerlo de forma segura. <b>Tú puedes mostrárselo.</b> Añade una franja discreta con canales <b>verificados</b> para donar: te toma 2 minutos, es <b>totalmente gratis</b> y no le resta nada a tu sitio… pero para alguien en Venezuela puede significarlo todo.",
   "hero.cta": "Quiero ayudar desde mi web",
   "hero.alt": "Ver el listado de donaciones",
-
   "como.h2": "¿Cómo funciona?",
   "como.lead": "Instalas un pequeño código una sola vez. El listado de organizaciones vive en la nube (un archivo <code class=\"inline\">config.json</code>) y se actualiza para todos a la vez.",
   "como.c1.t": "1. Elige el formato",
@@ -24,25 +21,43 @@
   "como.c2.d": "Aparece una franja discreta abajo (o un botón / popup, tú eliges). No bloquea tu contenido.",
   "como.c3.t": "3. Listo y siempre al día",
   "como.c3.d": "Cuando se verifican nuevos canales de ayuda, tu widget se actualiza solo. No tienes que tocar nada.",
-
   "gen.h2": "Genera tu código",
   "gen.lead": "Personaliza y copia. Funciona en cualquier sitio HTML, y en Wix con bloque de código.",
-
   "wp.h2": "Instalar en WordPress",
   "wp.lead": "Con panel de ajustes, bloque de Gutenberg y shortcode.",
-
   "wix.h2": "Instalar en Wix",
-
   "sop.h2": "¿Necesitas ayuda para instalarlo?",
   "sop.lead": "La instalación y el soporte son <b>totalmente gratuitos, sin costo alguno</b>. Si tienes dudas para colocar el widget en tu web, escríbeme y te ayudo con gusto.",
   "sop.btn": "✉ Escribir al correo",
-
   "conf.h2": "Transparencia",
   "conf.lead": "Este proyecto es un agregador independiente. <b>No recibimos ni gestionamos dinero</b> y no cobramos comisión: cada botón lleva directo a la página oficial de la organización. Verificamos cada canal antes de listarlo y mostramos la fuente. ¿Ves un enlace dudoso o caído? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Repórtalo aquí</a>.",
-
   "foot.opensource": "Código abierto · Contenido en <code class=\"inline\">config.json</code>",
   "foot.list": "Listado completo",
   "foot.made": "Hecho para ayudar a Venezuela 💜",
   "foot.by": "Sitio desarrollado por",
-  "foot.support": "Soporte gratuito:"
+  "foot.support": "Soporte gratuito:",
+  "gen.l.mode": "Cómo se muestra",
+  "gen.opt.bar": "Franja fija abajo (recomendado)",
+  "gen.opt.button": "Botón flotante lateral",
+  "gen.opt.popup": "Popup al entrar",
+  "gen.l.lang": "Idioma",
+  "gen.l.pos": "Posición (botón)",
+  "gen.opt.right": "Derecha",
+  "gen.opt.left": "Izquierda",
+  "gen.l.color": "Color principal",
+  "gen.orgs.label": "Organizaciones a mostrar",
+  "gen.orgs.opt": "(opcional)",
+  "gen.orgs.desc": "Vacío = <b>mostrar todas</b> y mantenerse actualizado. Si marcas algunas, solo esas se mostrarán (los enlaces siguen actualizándose y las que se retiren por seguridad desaparecen).",
+  "gen.tab.script": "Script universal",
+  "gen.tab.iframe": "iframe (Wix / restrictivos)",
+  "gen.copy": "Copiar",
+  "wp.dl": "⬇ Descargar plugin (.zip)",
+  "wp.s1": "Descarga el <code class=\"inline\">.zip</code> del plugin.",
+  "wp.s2": "En tu WordPress: <b>Plugins → Añadir nuevo → Subir plugin</b>, elige el zip y actívalo.",
+  "wp.s3": "Ve a <b>Ajustes → Ayuda Venezuela</b> y elige modo, idioma y color.",
+  "wp.s4": "Opcional: coloca el bloque <b>“Ayuda Venezuela”</b> o el shortcode <code class=\"inline\">[donaciones_vzla]</code> dentro de una entrada o página.",
+  "wp.note": "El plugin no incluye el listado: lo lee del <code class=\"inline\">config.json</code> remoto. Actualizar las organizaciones nunca requiere actualizar el plugin.",
+  "wix.s1": "Edita tu sitio → <b>Añadir (+) → Insertar → Insertar HTML</b> (Embed HTML).",
+  "wix.s2": "Elige <b>“Código”</b> y pega el <b>Script universal</b> del generador de arriba. Si Wix bloquea scripts en tu plan, usa la opción <b>iframe</b>.",
+  "wix.s3": "Publica el sitio."
 }

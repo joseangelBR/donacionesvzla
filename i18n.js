@@ -77,6 +77,22 @@
     });
   }
 
+  var dicts = {};   // caché de diccionarios por idioma (incluye el español capturado del HTML)
+
+  // Guarda el contenido español original del HTML para poder RESTAURARLO al volver a "es".
+  function captureBase() {
+    var d = {};
+    document.querySelectorAll('[data-i18n]').forEach(function (n) { d[n.getAttribute('data-i18n')] = n.textContent; });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (n) { d[n.getAttribute('data-i18n-html')] = n.innerHTML; });
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (n) {
+      n.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+        var kv = pair.split(':'), attr = (kv[0] || '').trim(), key = (kv[1] || '').trim();
+        if (attr && key) d[key] = n.getAttribute(attr);
+      });
+    });
+    dicts[DEFAULT] = d;
+  }
+
   function set(lang, opts) {
     lang = normalize(lang) || DEFAULT;
     current = lang;
@@ -84,15 +100,17 @@
     document.documentElement.setAttribute('lang', lang);
     markSwitchers();
 
-    function done() {
+    function finish(dict) {
+      if (dict) applyDict(dict);
       document.dispatchEvent(new CustomEvent('dv-langchange', { detail: { lang: lang } }));
     }
 
-    if (lang === DEFAULT) { done(); return; }   // el HTML ya está en español
+    // El español (y cualquier idioma ya cargado) se aplica desde la caché → restaura al volver.
+    if (dicts[lang]) { finish(dicts[lang]); return; }
     fetch('i18n/' + lang + '.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function (dict) { applyDict(dict); done(); })
-      .catch(function () { done(); /* si falla, se queda el español base */ });
+      .then(function (dict) { dicts[lang] = dict; finish(dict); })
+      .catch(function () { finish(null); /* si falla, se queda el idioma actual */ });
   }
 
   window.DVI18n = {
@@ -103,6 +121,7 @@
   };
 
   function boot() {
+    captureBase();          // snapshot del español ANTES de traducir
     renderSwitchers();
     set(detect(), { silent: true });
   }

@@ -6,14 +6,12 @@
   "donar.foot.note": "Agrégateur indépendant · Nous ne gérons pas d'argent et ne prélevons aucune commission",
   "donar.foot.report": "Signaler un problème",
   "donar.foot.add": "Ajoutez ce widget à votre site",
-
   "head.title": "Aidez le Venezuela — Widget de dons pour votre site",
   "head.desc": "Ajoutez à votre site (WordPress, Wix ou HTML) une barre ou une popup avec des canaux vérifiés pour faire un don au Venezuela. Gratuit, léger et actualisable sans réinstaller.",
   "hero.h1": "💜 Votre site peut aider à sauver des vies au Venezuela",
   "hero.p": "Des milliers de familles ont tout perdu après le séisme. Chaque personne qui visite votre page veut aider, mais ne sait pas où le faire en toute sécurité. <b>Vous pouvez le lui montrer.</b> Ajoutez une barre discrète avec des canaux <b>vérifiés</b> pour faire un don : cela prend 2 minutes, c'est <b>entièrement gratuit</b> et cela n'enlève rien à votre site… mais pour quelqu'un au Venezuela, cela peut tout changer.",
   "hero.cta": "Je veux aider depuis mon site",
   "hero.alt": "Voir la liste des dons",
-
   "como.h2": "Comment ça marche ?",
   "como.lead": "Vous installez un petit code une seule fois. La liste des organisations vit dans le cloud (un fichier <code class=\"inline\">config.json</code>) et se met à jour pour tous en même temps.",
   "como.c1.t": "1. Choisissez le format",
@@ -22,25 +20,43 @@
   "como.c2.d": "Une barre discrète apparaît en bas (ou un bouton / une popup, à vous de choisir). Elle ne bloque pas votre contenu.",
   "como.c3.t": "3. Prêt et toujours à jour",
   "como.c3.d": "Quand de nouveaux canaux d'aide sont vérifiés, votre widget se met à jour tout seul. Vous n'avez rien à faire.",
-
   "gen.h2": "Générez votre code",
   "gen.lead": "Personnalisez et copiez. Fonctionne sur n'importe quel site HTML, et sur Wix avec un bloc de code.",
-
   "wp.h2": "Installer sur WordPress",
   "wp.lead": "Avec un panneau de réglages, un bloc Gutenberg et un shortcode.",
-
   "wix.h2": "Installer sur Wix",
-
   "sop.h2": "Besoin d'aide pour l'installer ?",
   "sop.lead": "L'installation et le support sont <b>entièrement gratuits, sans aucun coût</b>. Si vous avez des questions pour placer le widget sur votre site, écrivez-moi et je vous aiderai avec plaisir.",
   "sop.btn": "✉ Écrire par e-mail",
-
   "conf.h2": "Transparence",
   "conf.lead": "Ce projet est un agrégateur indépendant. <b>Nous ne recevons ni ne gérons d'argent</b> et ne prélevons aucune commission : chaque bouton mène directement à la page officielle de l'organisation. Nous vérifions chaque canal avant de le lister et indiquons la source. Vous voyez un lien suspect ou hors service ? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Signalez-le ici</a>.",
-
   "foot.opensource": "Open source · Contenu dans <code class=\"inline\">config.json</code>",
   "foot.list": "Liste complète",
   "foot.made": "Fait pour aider le Venezuela 💜",
   "foot.by": "Site développé par",
-  "foot.support": "Support gratuit :"
+  "foot.support": "Support gratuit :",
+  "gen.l.mode": "Comment il s'affiche",
+  "gen.opt.bar": "Barre fixe en bas (recommandé)",
+  "gen.opt.button": "Bouton flottant latéral",
+  "gen.opt.popup": "Popup à l'arrivée",
+  "gen.l.lang": "Langue",
+  "gen.l.pos": "Position (bouton)",
+  "gen.opt.right": "Droite",
+  "gen.opt.left": "Gauche",
+  "gen.l.color": "Couleur principale",
+  "gen.orgs.label": "Organisations à afficher",
+  "gen.orgs.opt": "(facultatif)",
+  "gen.orgs.desc": "Vide = <b>tout afficher</b> et rester à jour. Si vous en cochez quelques-unes, seules celles-ci s'afficheront (les liens continuent de se mettre à jour et celles retirées par sécurité disparaissent).",
+  "gen.tab.script": "Script universel",
+  "gen.tab.iframe": "iframe (Wix / restrictifs)",
+  "gen.copy": "Copier",
+  "wp.dl": "⬇ Télécharger le plugin (.zip)",
+  "wp.s1": "Téléchargez le <code class=\"inline\">.zip</code> du plugin.",
+  "wp.s2": "Dans votre WordPress : <b>Extensions → Ajouter → Téléverser une extension</b>, choisissez le zip et activez-le.",
+  "wp.s3": "Allez dans <b>Réglages → Ayuda Venezuela</b> et choisissez le mode, la langue et la couleur.",
+  "wp.s4": "Facultatif : placez le bloc <b>“Ayuda Venezuela”</b> ou le shortcode <code class=\"inline\">[donaciones_vzla]</code> dans un article ou une page.",
+  "wp.note": "Le plugin n'inclut pas la liste : il la lit depuis le <code class=\"inline\">config.json</code> distant. Mettre à jour les organisations ne nécessite jamais de mettre à jour le plugin.",
+  "wix.s1": "Modifiez votre site → <b>Ajouter (+) → Intégrer → Intégrer HTML</b> (Embed HTML).",
+  "wix.s2": "Choisissez <b>“Code”</b> et collez le <b>Script universel</b> du générateur ci-dessus. Si Wix bloque les scripts sur votre forfait, utilisez l'option <b>iframe</b>.",
+  "wix.s3": "Publiez le site."
 }

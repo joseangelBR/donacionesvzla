@@ -6,14 +6,12 @@
   "donar.foot.note": "Independent aggregator · We don't handle money or charge any commission",
   "donar.foot.report": "Report a problem",
   "donar.foot.add": "Add this widget to your website",
-
   "head.title": "Help Venezuela — Donation widget for your website",
   "head.desc": "Add a bar or popup to your site (WordPress, Wix or HTML) with verified channels to donate to Venezuela. Free, lightweight and updatable without reinstalling.",
   "hero.h1": "💜 Your website can help save lives in Venezuela",
   "hero.p": "Thousands of families lost everything after the earthquake. Everyone who visits your page wants to help, but doesn't know where to do it safely. <b>You can show them.</b> Add a discreet bar with <b>verified</b> channels to donate: it takes 2 minutes, it's <b>completely free</b> and it takes nothing away from your site… but for someone in Venezuela it can mean everything.",
   "hero.cta": "I want to help from my website",
   "hero.alt": "See the donation list",
-
   "como.h2": "How does it work?",
   "como.lead": "You install a small snippet just once. The list of organizations lives in the cloud (a <code class=\"inline\">config.json</code> file) and updates for everyone at once.",
   "como.c1.t": "1. Choose the format",
@@ -22,25 +20,43 @@
   "como.c2.d": "A discreet bar appears at the bottom (or a button / popup, your choice). It doesn't block your content.",
   "como.c3.t": "3. Done and always up to date",
   "como.c3.d": "When new aid channels are verified, your widget updates on its own. You don't have to touch a thing.",
-
   "gen.h2": "Generate your code",
   "gen.lead": "Customize and copy. It works on any HTML site, and on Wix with a code block.",
-
   "wp.h2": "Install on WordPress",
   "wp.lead": "With a settings panel, Gutenberg block and shortcode.",
-
   "wix.h2": "Install on Wix",
-
   "sop.h2": "Need help installing it?",
   "sop.lead": "Installation and support are <b>completely free, at no cost at all</b>. If you have questions about placing the widget on your site, write to me and I'll gladly help.",
   "sop.btn": "✉ Email me",
-
   "conf.h2": "Transparency",
   "conf.lead": "This project is an independent aggregator. <b>We don't receive or handle money</b> and charge no commission: each button links straight to the organization's official page. We verify every channel before listing it and show the source. See a suspicious or broken link? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Report it here</a>.",
-
   "foot.opensource": "Open source · Content in <code class=\"inline\">config.json</code>",
   "foot.list": "Full list",
   "foot.made": "Made to help Venezuela 💜",
   "foot.by": "Website developed by",
-  "foot.support": "Free support:"
+  "foot.support": "Free support:",
+  "gen.l.mode": "How it displays",
+  "gen.opt.bar": "Fixed bar at the bottom (recommended)",
+  "gen.opt.button": "Floating side button",
+  "gen.opt.popup": "Popup on entry",
+  "gen.l.lang": "Language",
+  "gen.l.pos": "Position (button)",
+  "gen.opt.right": "Right",
+  "gen.opt.left": "Left",
+  "gen.l.color": "Primary color",
+  "gen.orgs.label": "Organizations to show",
+  "gen.orgs.opt": "(optional)",
+  "gen.orgs.desc": "Empty = <b>show all</b> and stay up to date. If you check some, only those will show (links keep updating and any removed for safety disappear).",
+  "gen.tab.script": "Universal script",
+  "gen.tab.iframe": "iframe (Wix / restrictive)",
+  "gen.copy": "Copy",
+  "wp.dl": "⬇ Download plugin (.zip)",
+  "wp.s1": "Download the plugin's <code class=\"inline\">.zip</code>.",
+  "wp.s2": "In your WordPress: <b>Plugins → Add New → Upload Plugin</b>, choose the zip and activate it.",
+  "wp.s3": "Go to <b>Settings → Ayuda Venezuela</b> and choose mode, language and color.",
+  "wp.s4": "Optional: place the <b>“Ayuda Venezuela”</b> block or the <code class=\"inline\">[donaciones_vzla]</code> shortcode inside a post or page.",
+  "wp.note": "The plugin doesn't include the list: it reads it from the remote <code class=\"inline\">config.json</code>. Updating the organizations never requires updating the plugin.",
+  "wix.s1": "Edit your site → <b>Add (+) → Embed → Embed HTML</b> (Embed HTML).",
+  "wix.s2": "Choose <b>“Code”</b> and paste the <b>Universal script</b> from the generator above. If Wix blocks scripts on your plan, use the <b>iframe</b> option.",
+  "wix.s3": "Publish the site."
 }

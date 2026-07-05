@@ -6,14 +6,12 @@
   "donar.foot.note": "Agregador independente · Não administramos dinheiro nem cobramos comissão",
   "donar.foot.report": "Relatar um problema",
   "donar.foot.add": "Adicione este widget ao seu site",
-
   "head.title": "Ajude a Venezuela — Widget de doações para o seu site",
   "head.desc": "Adicione ao seu site (WordPress, Wix ou HTML) uma faixa ou popup com canais verificados para doar à Venezuela. Grátis, leve e atualizável sem reinstalar.",
   "hero.h1": "💜 O seu site pode ajudar a salvar vidas na Venezuela",
   "hero.p": "Milhares de famílias perderam tudo após o terremoto. Cada pessoa que visita a sua página quer ajudar, mas não sabe onde fazê-lo com segurança. <b>Você pode mostrar a ela.</b> Adicione uma faixa discreta com canais <b>verificados</b> para doar: leva 2 minutos, é <b>totalmente grátis</b> e não tira nada do seu site… mas para alguém na Venezuela pode significar tudo.",
   "hero.cta": "Quero ajudar a partir do meu site",
   "hero.alt": "Ver a lista de doações",
-
   "como.h2": "Como funciona?",
   "como.lead": "Você instala um pequeno código uma única vez. A lista de organizações vive na nuvem (um arquivo <code class=\"inline\">config.json</code>) e é atualizada para todos ao mesmo tempo.",
   "como.c1.t": "1. Escolha o formato",
@@ -22,25 +20,43 @@
   "como.c2.d": "Aparece uma faixa discreta embaixo (ou um botão / popup, você escolhe). Não bloqueia o seu conteúdo.",
   "como.c3.t": "3. Pronto e sempre atualizado",
   "como.c3.d": "Quando novos canais de ajuda são verificados, o seu widget se atualiza sozinho. Você não precisa mexer em nada.",
-
   "gen.h2": "Gere o seu código",
   "gen.lead": "Personalize e copie. Funciona em qualquer site HTML e no Wix com um bloco de código.",
-
   "wp.h2": "Instalar no WordPress",
   "wp.lead": "Com painel de configurações, bloco Gutenberg e shortcode.",
-
   "wix.h2": "Instalar no Wix",
-
   "sop.h2": "Precisa de ajuda para instalar?",
   "sop.lead": "A instalação e o suporte são <b>totalmente gratuitos, sem custo algum</b>. Se tiver dúvidas para colocar o widget no seu site, escreva para mim e eu ajudo com prazer.",
   "sop.btn": "✉ Escrever por e-mail",
-
   "conf.h2": "Transparência",
   "conf.lead": "Este projeto é um agregador independente. <b>Não recebemos nem administramos dinheiro</b> e não cobramos comissão: cada botão leva diretamente à página oficial da organização. Verificamos cada canal antes de listá-lo e mostramos a fonte. Viu um link suspeito ou fora do ar? <a href=\"mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema\">Relate aqui</a>.",
-
   "foot.opensource": "Código aberto · Conteúdo em <code class=\"inline\">config.json</code>",
   "foot.list": "Lista completa",
   "foot.made": "Feito para ajudar a Venezuela 💜",
   "foot.by": "Site desenvolvido por",
-  "foot.support": "Suporte gratuito:"
+  "foot.support": "Suporte gratuito:",
+  "gen.l.mode": "Como aparece",
+  "gen.opt.bar": "Faixa fixa embaixo (recomendado)",
+  "gen.opt.button": "Botão flutuante lateral",
+  "gen.opt.popup": "Popup ao entrar",
+  "gen.l.lang": "Idioma",
+  "gen.l.pos": "Posição (botão)",
+  "gen.opt.right": "Direita",
+  "gen.opt.left": "Esquerda",
+  "gen.l.color": "Cor principal",
+  "gen.orgs.label": "Organizações a mostrar",
+  "gen.orgs.opt": "(opcional)",
+  "gen.orgs.desc": "Vazio = <b>mostrar todas</b> e manter-se atualizado. Se marcar algumas, só essas aparecerão (os links continuam sendo atualizados e as removidas por segurança desaparecem).",
+  "gen.tab.script": "Script universal",
+  "gen.tab.iframe": "iframe (Wix / restritivos)",
+  "gen.copy": "Copiar",
+  "wp.dl": "⬇ Baixar plugin (.zip)",
+  "wp.s1": "Baixe o <code class=\"inline\">.zip</code> do plugin.",
+  "wp.s2": "No seu WordPress: <b>Plugins → Adicionar novo → Enviar plugin</b>, escolha o zip e ative-o.",
+  "wp.s3": "Vá em <b>Configurações → Ayuda Venezuela</b> e escolha modo, idioma e cor.",
+  "wp.s4": "Opcional: coloque o bloco <b>“Ayuda Venezuela”</b> ou o shortcode <code class=\"inline\">[donaciones_vzla]</code> dentro de um post ou página.",
+  "wp.note": "O plugin não inclui a lista: ele a lê do <code class=\"inline\">config.json</code> remoto. Atualizar as organizações nunca exige atualizar o plugin.",
+  "wix.s1": "Edite seu site → <b>Adicionar (+) → Inserir → Inserir HTML</b> (Embed HTML).",
+  "wix.s2": "Escolha <b>“Código”</b> e cole o <b>Script universal</b> do gerador acima. Se o Wix bloquear scripts no seu plano, use a opção <b>iframe</b>.",
+  "wix.s3": "Publique o site."
 }

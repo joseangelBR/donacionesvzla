@@ -86,42 +86,42 @@
 
       <div class="row">
         <div>
-          <label for="mode">Cómo se muestra</label>
+          <label for="mode" data-i18n="gen.l.mode">Cómo se muestra</label>
           <select id="mode">
-            <option value="bar">Franja fija abajo (recomendado)</option>
-            <option value="button">Botón flotante lateral</option>
-            <option value="popup">Popup al entrar</option>
+            <option value="bar" data-i18n="gen.opt.bar">Franja fija abajo (recomendado)</option>
+            <option value="button" data-i18n="gen.opt.button">Botón flotante lateral</option>
+            <option value="popup" data-i18n="gen.opt.popup">Popup al entrar</option>
           </select>
         </div>
         <div>
-          <label for="lang">Idioma</label>
+          <label for="lang" data-i18n="gen.l.lang">Idioma</label>
           <select id="lang"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option><option value="de">Deutsch</option></select>
         </div>
         <div>
-          <label for="position">Posición (botón)</label>
-          <select id="position"><option value="right">Derecha</option><option value="left">Izquierda</option></select>
+          <label for="position" data-i18n="gen.l.pos">Posición (botón)</label>
+          <select id="position"><option value="right" data-i18n="gen.opt.right">Derecha</option><option value="left" data-i18n="gen.opt.left">Izquierda</option></select>
         </div>
         <div>
-          <label for="primary">Color principal</label>
+          <label for="primary" data-i18n="gen.l.color">Color principal</label>
           <input type="color" id="primary" value="#7c3aed">
         </div>
       </div>
 
       <div style="margin-bottom:18px">
-        <label>Organizaciones a mostrar <span style="font-weight:400;color:var(--mut)">(opcional)</span></label>
+        <label><span data-i18n="gen.orgs.label">Organizaciones a mostrar</span> <span style="font-weight:400;color:var(--mut)" data-i18n="gen.orgs.opt">(opcional)</span></label>
         <div id="org-picker" style="border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff"></div>
-        <p class="description" style="color:var(--mut);font-size:13px;margin:6px 0 0">
+        <p class="description" style="color:var(--mut);font-size:13px;margin:6px 0 0" data-i18n-html="gen.orgs.desc">
           Vacío = <b>mostrar todas</b> y mantenerse actualizado. Si marcas algunas, solo esas se mostrarán
           (los enlaces siguen actualizándose y las que se retiren por seguridad desaparecen).</p>
       </div>
 
       <div class="tabs">
-        <button class="tab on" data-fmt="script">Script universal</button>
-        <button class="tab" data-fmt="iframe">iframe (Wix / restrictivos)</button>
+        <button class="tab on" data-fmt="script" data-i18n="gen.tab.script">Script universal</button>
+        <button class="tab" data-fmt="iframe" data-i18n="gen.tab.iframe">iframe (Wix / restrictivos)</button>
       </div>
       <div class="code-head">
-        <strong id="fmt-title">Script universal</strong>
-        <button class="copy" id="copy">Copiar</button>
+        <strong id="fmt-title" data-i18n="gen.tab.script">Script universal</strong>
+        <button class="copy" id="copy" data-i18n="gen.copy">Copiar</button>
       </div>
       <pre><code id="snippet"></code></pre>
 
@@ -133,15 +133,15 @@
     <div class="wrap">
       <h2 data-i18n="wp.h2">Instalar en WordPress</h2>
       <p class="lead" data-i18n="wp.lead">Con panel de ajustes, bloque de Gutenberg y shortcode.</p>
-      <p><a class="btn" style="background:var(--p);color:#fff" href="donaciones-vzla.zip">⬇ Descargar plugin (.zip)</a></p>
+      <p><a class="btn" style="background:var(--p);color:#fff" href="donaciones-vzla.zip" data-i18n="wp.dl">⬇ Descargar plugin (.zip)</a></p>
       <ol>
-        <li>Descarga el <code class="inline">.zip</code> del plugin.</li>
-        <li>En tu WordPress: <b>Plugins → Añadir nuevo → Subir plugin</b>, elige el zip y actívalo.</li>
-        <li>Ve a <b>Ajustes → Ayuda Venezuela</b> y elige modo, idioma y color.</li>
-        <li>Opcional: coloca el bloque <b>“Ayuda Venezuela”</b> o el shortcode
+        <li data-i18n-html="wp.s1">Descarga el <code class="inline">.zip</code> del plugin.</li>
+        <li data-i18n-html="wp.s2">En tu WordPress: <b>Plugins → Añadir nuevo → Subir plugin</b>, elige el zip y actívalo.</li>
+        <li data-i18n-html="wp.s3">Ve a <b>Ajustes → Ayuda Venezuela</b> y elige modo, idioma y color.</li>
+        <li data-i18n-html="wp.s4">Opcional: coloca el bloque <b>“Ayuda Venezuela”</b> o el shortcode
           <code class="inline">[donaciones_vzla]</code> dentro de una entrada o página.</li>
       </ol>
-      <p class="note">El plugin no incluye el listado: lo lee del <code class="inline">config.json</code> remoto.
+      <p class="note" data-i18n-html="wp.note">El plugin no incluye el listado: lo lee del <code class="inline">config.json</code> remoto.
         Actualizar las organizaciones nunca requiere actualizar el plugin.</p>
     </div>
   </section>
@@ -150,10 +150,10 @@
     <div class="wrap">
       <h2 data-i18n="wix.h2">Instalar en Wix</h2>
       <ol>
-        <li>Edita tu sitio → <b>Añadir (+) → Insertar → Insertar HTML</b> (Embed HTML).</li>
-        <li>Elige <b>“Código”</b> y pega el <b>Script universal</b> del generador de arriba.
+        <li data-i18n-html="wix.s1">Edita tu sitio → <b>Añadir (+) → Insertar → Insertar HTML</b> (Embed HTML).</li>
+        <li data-i18n-html="wix.s2">Elige <b>“Código”</b> y pega el <b>Script universal</b> del generador de arriba.
           Si Wix bloquea scripts en tu plan, usa la opción <b>iframe</b>.</li>
-        <li>Publica el sitio.</li>
+        <li data-i18n-html="wix.s3">Publica el sitio.</li>
       </ol>
     </div>
   </section>
