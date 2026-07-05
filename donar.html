@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donar a Venezuela — Canales verificados de ayuda</title>
+  <meta name="description" content="Listado de canales verificados para donar y colaborar con Venezuela tras el terremoto. Cada enlace lleva directo a la organización oficial.">
+  <meta property="og:title" content="Donar a Venezuela — Canales verificados de ayuda">
+  <meta property="og:description" content="Formas verificadas de ayudar a Venezuela tras el terremoto.">
+  <meta property="og:type" content="website">
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:#f8fafc;color:#1f2937;line-height:1.55}
+    header{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;padding:48px 20px 40px;text-align:center}
+    header h1{margin:0 0 8px;font-size:30px}
+    header p{margin:0 auto;max-width:60ch;opacity:.95}
+    main{max-width:720px;margin:0 auto;padding:24px 16px 80px}
+    .lang{display:flex;gap:8px;justify-content:center;margin:14px 0 0}
+    .lang button{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.5);
+      border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;cursor:pointer}
+    .lang button.on{background:#fff;color:#5b21b6}
+    #app{margin-top:8px}
+    footer{max-width:720px;margin:0 auto;padding:0 16px 60px;color:#6b7280;font-size:13px;text-align:center}
+    footer a{color:#7c3aed}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💜 Donar a Venezuela</h1>
+    <p>Canales verificados para ayudar tras el terremoto. Cada botón te lleva directo a la organización oficial.</p>
+    <div class="lang">
+      <button data-lang="es" class="on">Español</button>
+      <button data-lang="en">English</button>
+    </div>
+  </header>
+
+  <main><div id="app"></div></main>
+
+  <footer>
+    Agregador independiente · No gestionamos dinero ni cobramos comisión ·
+    <a href="mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema">Reportar un problema</a> ·
+    <a href="index.html">Añadir este widget a tu web</a>
+  </footer>
+
+  <script>
+    (function () {
+      function mount(lang) {
+        var app = document.getElementById('app');
+        app.innerHTML = '';
+        var s = document.createElement('script');
+        s.src = 'widget.js';
+        s.setAttribute('data-mode', 'manual');
+        s.onload = function () {
+          window.DonacionesVzla.mount({ mode: 'inline', target: '#app', lang: lang });
+        };
+        document.body.appendChild(s);
+      }
+      var q = new URLSearchParams(location.search);
+      var lang = (q.get('lang') || 'es').toLowerCase();
+      document.querySelectorAll('.lang button').forEach(function (b) {
+        b.classList.toggle('on', b.dataset.lang === lang);
+        b.addEventListener('click', function () {
+          lang = b.dataset.lang;
+          document.querySelectorAll('.lang button').forEach(function (x) { x.classList.toggle('on', x === b); });
+          // recarga limpia del widget en el nuevo idioma
+          if (window.DonacionesVzla && window.DonacionesVzla.mount) {
+            window.DonacionesVzla.mount({ mode: 'inline', target: '#app', lang: lang });
+          }
+        });
+      });
+      mount(lang);
+    })();
+  </script>
+</body>
+</html>

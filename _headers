@@ -1,0 +1,10 @@
+# Cloudflare Pages — control de cache
+# El contenido (listado) se refresca como máximo cada 5 minutos.
+/config.json
+  Cache-Control: public, max-age=300, s-maxage=300
+  Access-Control-Allow-Origin: *
+
+# El código del widget puede cachearse más tiempo (cambia poco).
+/widget.js
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda para Venezuela — Widget de donaciones para tu web</title>
+  <meta name="description" content="Añade a tu sitio (WordPress, Wix o HTML) una franja o popup con canales verificados para donar a Venezuela. Gratis, ligero y actualizable sin reinstalar.">
+  <style>
+    :root{--p:#7c3aed;--pt:#fff;--ink:#1f2937;--mut:#6b7280;--line:#e5e7eb;--bg:#f8fafc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);background:#fff;line-height:1.55}
+    .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+    header.hero{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;padding:64px 0 56px;text-align:center}
+    .hero h1{font-size:34px;margin:0 0 10px}
+    .hero p{font-size:18px;opacity:.95;max-width:60ch;margin:0 auto 24px}
+    .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:#fff;color:var(--p);font-weight:700;text-decoration:none;
+      padding:12px 20px;border-radius:10px;border:0;cursor:pointer;font-size:15px}
+    .btn.alt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+    section{padding:44px 0;border-bottom:1px solid var(--line)}
+    h2{font-size:24px;margin:0 0 6px}
+    .lead{color:var(--mut);margin:0 0 24px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--mut);font-size:14px}
+    label{display:block;font-size:13px;font-weight:600;margin:0 0 4px}
+    .row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:18px}
+    select,input[type=color]{width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff}
+    input[type=color]{height:42px;padding:4px}
+    pre{background:#0f172a;color:#e2e8f0;padding:16px;border-radius:12px;overflow:auto;font-size:13px;margin:0}
+    .code-head{display:flex;justify-content:space-between;align-items:center;margin:0 0 8px}
+    .copy{background:var(--p);color:#fff;border:0;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+    .tabs{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+    .tab{padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:13px;font-weight:600}
+    .tab.on{background:var(--p);color:#fff;border-color:var(--p)}
+    ol{padding-left:20px}ol li{margin:0 0 8px}
+    code.inline{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:13px}
+    .note{background:#fffbeb;border:1px solid #fcd34d;color:#92400e;padding:12px 14px;border-radius:10px;font-size:14px}
+    footer{padding:32px 0 100px;color:var(--mut);font-size:13px;text-align:center}
+    footer a{color:var(--p)}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>💜 Ayuda para Venezuela en tu web</h1>
+      <p>Añade una franja o popup con canales <b>verificados</b> para donar tras el terremoto.
+         Gratis, ligero y se actualiza solo — sin reinstalar nada.</p>
+      <div class="btns">
+        <a class="btn" href="#instalar">Instalar en mi web</a>
+        <a class="btn alt" href="donar.html" target="_blank">Ver el listado de donaciones</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="como">
+    <div class="wrap">
+      <h2>¿Cómo funciona?</h2>
+      <p class="lead">Instalas un pequeño código una sola vez. El listado de organizaciones vive en la
+        nube (un archivo <code class="inline">config.json</code>) y se actualiza para todos a la vez.</p>
+      <div class="grid">
+        <div class="card"><h3>1. Elige el formato</h3><p>Plugin de WordPress, código para Wix, iframe o un
+          simple <code class="inline">&lt;script&gt;</code> para cualquier web.</p></div>
+        <div class="card"><h3>2. Pega el código</h3><p>Aparece una franja discreta abajo (o un botón / popup,
+          tú eliges). No bloquea tu contenido.</p></div>
+        <div class="card"><h3>3. Listo y siempre al día</h3><p>Cuando se verifican nuevos canales de ayuda,
+          tu widget se actualiza solo. No tienes que tocar nada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="instalar">
+    <div class="wrap">
+      <h2>Genera tu código</h2>
+      <p class="lead">Personaliza y copia. Funciona en cualquier sitio HTML, y en Wix con bloque de código.</p>
+
+      <div class="row">
+        <div>
+          <label for="mode">Cómo se muestra</label>
+          <select id="mode">
+            <option value="bar">Franja fija abajo (recomendado)</option>
+            <option value="button">Botón flotante lateral</option>
+            <option value="popup">Popup al entrar</option>
+          </select>
+        </div>
+        <div>
+          <label for="lang">Idioma</label>
+          <select id="lang"><option value="es">Español</option><option value="en">English</option></select>
+        </div>
+        <div>
+          <label for="position">Posición (botón)</label>
+          <select id="position"><option value="right">Derecha</option><option value="left">Izquierda</option></select>
+        </div>
+        <div>
+          <label for="primary">Color principal</label>
+          <input type="color" id="primary" value="#7c3aed">
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px">
+        <label>Organizaciones a mostrar <span style="font-weight:400;color:var(--mut)">(opcional)</span></label>
+        <div id="org-picker" style="border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff"></div>
+        <p class="description" style="color:var(--mut);font-size:13px;margin:6px 0 0">
+          Vacío = <b>mostrar todas</b> y mantenerse actualizado. Si marcas algunas, solo esas se mostrarán
+          (los enlaces siguen actualizándose y las que se retiren por seguridad desaparecen).</p>
+      </div>
+
+      <div class="tabs">
+        <button class="tab on" data-fmt="script">Script universal</button>
+        <button class="tab" data-fmt="iframe">iframe (Wix / restrictivos)</button>
+      </div>
+      <div class="code-head">
+        <strong id="fmt-title">Script universal</strong>
+        <button class="copy" id="copy">Copiar</button>
+      </div>
+      <pre><code id="snippet"></code></pre>
+
+
+    </div>
+  </section>
+
+  <section id="instalar-wordpress">
+    <div class="wrap">
+      <h2>Instalar en WordPress</h2>
+      <p class="lead">Con panel de ajustes, bloque de Gutenberg y shortcode.</p>
+      <p><a class="btn" style="background:var(--p);color:#fff" href="donaciones-vzla.zip">⬇ Descargar plugin (.zip)</a></p>
+      <ol>
+        <li>Descarga el <code class="inline">.zip</code> del plugin.</li>
+        <li>En tu WordPress: <b>Plugins → Añadir nuevo → Subir plugin</b>, elige el zip y actívalo.</li>
+        <li>Ve a <b>Ajustes → Ayuda Venezuela</b> y elige modo, idioma y color.</li>
+        <li>Opcional: coloca el bloque <b>“Ayuda Venezuela”</b> o el shortcode
+          <code class="inline">[donaciones_vzla]</code> dentro de una entrada o página.</li>
+      </ol>
+      <p class="note">El plugin no incluye el listado: lo lee del <code class="inline">config.json</code> remoto.
+        Actualizar las organizaciones nunca requiere actualizar el plugin.</p>
+    </div>
+  </section>
+
+  <section id="instalar-wix">
+    <div class="wrap">
+      <h2>Instalar en Wix</h2>
+      <ol>
+        <li>Edita tu sitio → <b>Añadir (+) → Insertar → Insertar HTML</b> (Embed HTML).</li>
+        <li>Elige <b>“Código”</b> y pega el <b>Script universal</b> del generador de arriba.
+          Si Wix bloquea scripts en tu plan, usa la opción <b>iframe</b>.</li>
+        <li>Publica el sitio.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="soporte">
+    <div class="wrap">
+      <h2>¿Necesitas ayuda para instalarlo?</h2>
+      <p class="lead">La instalación y el soporte son <b>totalmente gratuitos, sin costo alguno</b>. Si tienes
+        dudas para colocar el widget en tu web, escríbeme y te ayudo con gusto.</p>
+      <div class="btns" style="justify-content:flex-start">
+        <a class="btn" style="background:var(--p);color:#fff"
+           href="mailto:Jbdevsolutions035@gmail.com?subject=Ayuda%20con%20la%20instalaci%C3%B3n%20-%20Ayuda%20Venezuela">✉ Escribir al correo</a>
+      </div>
+
+  </section>
+
+  <section id="confianza">
+    <div class="wrap">
+      <h2>Transparencia</h2>
+      <p class="lead">Este proyecto es un agregador independiente. <b>No recibimos ni gestionamos dinero</b> y
+        no cobramos comisión: cada botón lleva directo a la página oficial de la organización. Verificamos
+        cada canal antes de listarlo y mostramos la fuente. ¿Ves un enlace dudoso o caído?
+        <a href="mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema">Repórtalo aquí</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      Código abierto · Contenido en <code class="inline">config.json</code> ·
+      <a href="donar.html">Listado completo</a> ·
+      Hecho para ayudar a Venezuela 💜
+      <br><br>
+      Sitio desarrollado por <b>Ing. José Ángel Bolívar</b> ·
+      <a href="https://ve.linkedin.com/in/joseangel-bolivar-649b382a5" target="_blank" rel="noopener">LinkedIn</a> ·
+      Soporte gratuito: <a href="mailto:Jbdevsolutions035@gmail.com">Jbdevsolutions035@gmail.com</a>
+    </div>
+  </footer>
+
+  <!-- Widget en modo manual: la vista previa lo monta bajo demanda -->
+  <script src="widget.js" data-mode="manual"></script>
+
+  <script>
+    (function () {
+      var host = 'https://donaciones-vzla.pages.dev';
+      var els = ['mode','lang','position','primary'].reduce(function (a,id){a[id]=document.getElementById(id);return a;},{});
+      var fmt = 'script';
+      var snippet = document.getElementById('snippet');
+      var selectedOrgs = [];       // allowlist elegida en el picker
+      var activeConfig = null;     // datos usados por picker y vista previa
+      var currentPreview = null;   // modo de preview activo (para refrescar al cambiar selección)
+
+      function build() {
+        var mode = els.mode.value, lang = els.lang.value, pos = els.position.value, color = els.primary.value;
+        var orgs = selectedOrgs.join(',');
+        if (fmt === 'iframe') {
+          var url = host + '/embed.html?lang=' + lang + (orgs ? '&orgs=' + encodeURIComponent(orgs) : '');
+          return '<iframe\n  src="' + url + '"\n' +
+            '  title="Ayuda para Venezuela"\n' +
+            '  style="width:100%;max-width:640px;height:640px;border:0"\n  loading="lazy"></iframe>';
+        }
+        var attrs = ['src="' + host + '/widget.js"', 'data-mode="' + mode + '"', 'data-lang="' + lang + '"'];
+        if (mode === 'button') attrs.push('data-position="' + pos + '"');
+        if (color.toLowerCase() !== '#7c3aed') attrs.push('data-primary="' + color + '"');
+        if (orgs) attrs.push('data-orgs="' + orgs + '"');
+        attrs.push('async');
+        return '<script ' + attrs.join('\n        ') + '><\/script>';
+      }
+      function refresh(){ snippet.textContent = build(); }
+
+      // El snippet siempre se actualiza al cambiar cualquier ajuste.
+      Object.keys(els).forEach(function(k){ els[k].addEventListener('input', refresh); els[k].addEventListener('change', refresh); });
+
+      // Cambiar "Cómo se muestra" muestra automáticamente la vista previa en ese modo.
+      els.mode.addEventListener('change', function(){ preview(els.mode.value, 'pv-' + els.mode.value); });
+
+      // Ajustar idioma/posición/color refresca la vista previa si ya hay una activa.
+      ['lang','position','primary'].forEach(function(k){
+        els[k].addEventListener('change', function(){
+          if (currentPreview) preview(currentPreview, 'pv-' + currentPreview);
+        });
+      });
+      document.querySelectorAll('.tab').forEach(function(tab){
+        tab.addEventListener('click', function(){
+          document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
+          tab.classList.add('on'); fmt = tab.dataset.fmt;
+          document.getElementById('fmt-title').textContent = fmt === 'iframe' ? 'iframe (Wix / restrictivos)' : 'Script universal';
+          refresh();
+        });
+      });
+      document.getElementById('copy').addEventListener('click', function(){
+        navigator.clipboard.writeText(snippet.textContent).then(function(){
+          var b = document.getElementById('copy'); var o = b.textContent; b.textContent = '¡Copiado!';
+          setTimeout(function(){ b.textContent = o; }, 1500);
+        });
+      });
+      refresh();
+
+      /* ---------- vista previa en vivo (franja / botón / popup) ---------- */
+      // Datos de ejemplo embebidos: la vista previa NO hace fetch (funciona sin servidor).
+      var SAMPLE = {
+        lastUpdated: '2026-07-05',
+        meta: {
+          eventTitle: { es: 'Cada aporte suma', en: 'Every bit counts' },
+          eventSubtitle: { es: 'Conoce cómo puedes apoyar a Venezuela tras el terremoto. Juntos podemos hacer la diferencia.', en: 'Find out how you can support Venezuela after the earthquake. Together we can make a difference.' },
+          ctaLabel: { es: 'Quiero ayudar', en: 'I want to help' },
+          disclaimer: { es: 'Vista previa. Somos un agregador independiente: no recibimos dinero, cada botón lleva a la organización oficial.', en: 'Preview. We are an independent aggregator: we do not handle money, each button links to the official organization.' },
+          fullPageUrl: 'donar.html'
+        },
+        categories: [
+          { id: 'monetary', icon: '💜', label: { es: 'Donación económica', en: 'Money donation' } },
+          { id: 'inkind', icon: '📦', label: { es: 'Insumos y ayuda material', en: 'Supplies & in-kind' } },
+          { id: 'crowdfunding', icon: '🤝', label: { es: 'Recaudaciones verificadas', en: 'Verified fundraisers' } }
+        ],
+        organizations: [
+          { id: 'caritas-venezuela', name: 'Cáritas Venezuela', categoryId: 'monetary', region: 'Venezuela', verified: true,
+            description: { es: 'Organización humanitaria de la Iglesia Católica: nutrición infantil, medicinas, comedores y atención médica.', en: 'Catholic Church humanitarian org: child nutrition, medicine, community kitchens and healthcare.' }, url: 'https://caritasvenezuela.org/donaciones/' },
+          { id: 'ifrc-cruz-roja', name: 'IFRC / Cruz Roja', categoryId: 'monetary', region: 'Internacional', verified: true,
+            description: { es: 'Primera respuesta a desastres: búsqueda y rescate, primeros auxilios, agua potable y refugios.', en: 'Disaster first response: search & rescue, first aid, clean water and shelters.' }, url: 'https://donate.redcrossredcrescent.org/ifrc/venezuela-earthquake/~my-donation' },
+          { id: 'unicef', name: 'UNICEF', categoryId: 'monetary', region: 'Internacional', verified: true,
+            description: { es: 'Protege a la infancia: kits de higiene, agua potable, nutrición y espacios seguros.', en: 'Protects children: hygiene kits, clean water, nutrition and safe spaces.' }, url: 'https://unicef.org.co/terremoto-venezuelav2' },
+          { id: 'givedirectly', name: 'GiveDirectly', categoryId: 'monetary', region: 'Internacional', verified: true,
+            description: { es: 'Transferencias directas de efectivo, sin condiciones, a las familias afectadas.', en: 'Direct, unconditional cash transfers to affected families.' }, url: 'https://www.givedirectly.org/venezuela-earthquakes' },
+          { id: 'yummy-rides', name: 'Yummy Rides', categoryId: 'inkind', region: 'Venezuela', verified: true,
+            description: { es: 'Recoge donativos físicos (alimentos, medicinas, ropa) en casa del donante con su flota.', en: 'Picks up physical donations (food, medicine, clothing) from donors with its fleet.' }, url: 'https://dona.yummyrides.com/' },
+          { id: 'globalgiving', name: 'GlobalGiving', categoryId: 'crowdfunding', region: 'Internacional', verified: true,
+            description: { es: 'Crowdfunding auditado que distribuye lo recaudado entre ONG locales verificadas.', en: 'Vetted crowdfunding that distributes funds to verified local NGOs.' }, url: 'https://www.globalgiving.org/projects/venezuela-earthquake-relief-fund/' }
+        ]
+      };
+
+      function whenReady(cb){
+        if (window.DonacionesVzla && window.DonacionesVzla.mount) return cb();
+        window.addEventListener('DOMContentLoaded', function(){ setTimeout(cb, 0); });
+      }
+      function markActive(id){
+        ['pv-bar','pv-button','pv-popup','pv-clear'].forEach(function(x){
+          document.getElementById(x).classList.toggle('on', x === id);
+        });
+      }
+      function preview(mode, id){
+        currentPreview = mode;
+        whenReady(function(){
+          if (window.DonacionesVzla.destroy) window.DonacionesVzla.destroy();
+          window.DonacionesVzla.mount({
+            mode: mode,
+            lang: els.lang.value,
+            position: els.position.value,
+            primary: els.primary.value,
+            preview: true,
+            data: activeConfig || SAMPLE,
+            target: '',
+            categories: [],
+            orgs: selectedOrgs.slice()
+          });
+          markActive(id);
+        });
+      }
+
+      /* ---------- selector de organizaciones (allowlist) ---------- */
+      function buildPicker(cfg){
+        var box = document.getElementById('org-picker');
+        box.innerHTML = '';
+        var orgs = (cfg && cfg.organizations) || [];
+        if (!orgs.length){ box.innerHTML = '<span style="color:#9ca3af;font-size:13px">No se pudo cargar la lista.</span>'; return; }
+        orgs.forEach(function(o){
+          var lbl = document.createElement('label');
+          lbl.style.cssText = 'display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-weight:400;font-size:14px;cursor:pointer';
+          var cb = document.createElement('input');
+          cb.type = 'checkbox'; cb.value = o.id; cb.style.marginTop = '3px';
+          cb.checked = selectedOrgs.indexOf(o.id) !== -1;
+          cb.addEventListener('change', function(){
+            selectedOrgs = Array.prototype.map.call(box.querySelectorAll('input:checked'), function(x){ return x.value; });
+            refresh();
+            if (currentPreview) preview(currentPreview, 'pv-' + currentPreview);
+          });
+          var span = document.createElement('span');
+          span.textContent = o.name || o.id;
+          lbl.appendChild(cb); lbl.appendChild(span);
+          box.appendChild(lbl);
+        });
+      }
+
+      // Por defecto usamos los datos de ejemplo (offline). Si la web está desplegada,
+      // intentamos cargar el config.json real para que el picker liste las orgs reales.
+      activeConfig = SAMPLE;
+      buildPicker(activeConfig);
+      fetch(host + '/config.json', { cache: 'no-cache' })
+        .then(function(r){ if (!r.ok) throw 0; return r.json(); })
+        .then(function(cfg){
+          activeConfig = cfg; selectedOrgs = []; buildPicker(cfg); refresh();
+          if (currentPreview) preview(currentPreview, 'pv-' + currentPreview);
+        })
+        .catch(function(){ /* offline/local: seguimos con los datos de ejemplo */ });
+      document.getElementById('pv-bar').addEventListener('click', function(){ preview('bar','pv-bar'); });
+      document.getElementById('pv-button').addEventListener('click', function(){ preview('button','pv-button'); });
+      document.getElementById('pv-popup').addEventListener('click', function(){ preview('popup','pv-popup'); });
+      document.getElementById('pv-clear').addEventListener('click', function(){
+        currentPreview = null;
+        whenReady(function(){ if (window.DonacionesVzla.destroy) window.DonacionesVzla.destroy(); markActive('pv-clear'); });
+      });
+
+      // Muestra una franja de ejemplo al cargar, para que se vea de inmediato.
+      whenReady(function(){ preview('bar','pv-bar'); });
+    })();
+  </script>
+</body>
+</html>

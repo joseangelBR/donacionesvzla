@@ -1,0 +1,128 @@
+{
+  "$schema": "./config.schema.json",
+  "_readme": "Este es el ÚNICO archivo que hay que editar para actualizar el listado. Al hacer push a GitHub, Cloudflare Pages lo publica y TODOS los sitios (WordPress, Wix, iframe, snippet) se actualizan solos. NO hace falta reinstalar nada. Las organizaciones con \"verified\": false son PLACEHOLDERS: reemplázalas por canales reales y verificados antes de publicar.",
+  "version": "2026-07-05",
+  "lastUpdated": "2026-07-05",
+  "meta": {
+    "eventTitle": {
+      "es": "Cada aporte suma",
+      "en": "Every bit counts"
+    },
+    "eventSubtitle": {
+      "es": "Conoce cómo puedes apoyar a Venezuela tras el terremoto. Juntos podemos hacer la diferencia.",
+      "en": "Find out how you can support Venezuela after the earthquake. Together we can make a difference."
+    },
+    "ctaLabel": {
+      "es": "Quiero ayudar",
+      "en": "I want to help"
+    },
+    "disclaimer": {
+      "es": "Somos un agregador independiente. No estamos afiliados a estas organizaciones, no recibimos ni gestionamos dinero y no cobramos comisión. Cada botón te lleva directo a la página oficial de la organización. Verifica siempre antes de donar.",
+      "en": "We are an independent aggregator. We are not affiliated with these organizations, we do not receive or handle money, and we take no commission. Each button links directly to the organization's official page. Always verify before donating."
+    },
+    "reportUrl": "mailto:Jbdevsolutions035@gmail.com?subject=Reportar%20problema%20-%20Ayuda%20Venezuela",
+    "fullPageUrl": "https://donaciones-vzla.pages.dev/donar.html"
+  },
+  "categories": [
+    { "id": "monetary",     "icon": "💜", "label": { "es": "Donación económica", "en": "Money donation" } },
+    { "id": "inkind",       "icon": "📦", "label": { "es": "Insumos y ayuda material", "en": "Supplies & in-kind" } },
+    { "id": "crowdfunding", "icon": "🤝", "label": { "es": "Recaudaciones verificadas", "en": "Verified fundraisers" } },
+    { "id": "volunteer",    "icon": "🙋", "label": { "es": "Voluntariado", "en": "Volunteer" } }
+  ],
+  "organizations": [
+    {
+      "id": "caritas-venezuela",
+      "name": "Cáritas Venezuela",
+      "categoryId": "monetary",
+      "description": {
+        "es": "Organización humanitaria de la Iglesia Católica con una enorme red de voluntarios en las parroquias. Programas de nutrición infantil, entrega de medicinas, comedores (ollas comunitarias) y atención médica básica.",
+        "en": "Catholic Church humanitarian organization with a large parish volunteer network. Runs child-nutrition programs, medicine delivery, community kitchens and basic healthcare."
+      },
+      "url": "https://caritasvenezuela.org/donaciones/",
+      "verified": true,
+      "verifiedSource": "https://caritasvenezuela.org/",
+      "region": "Venezuela",
+      "featured": true
+    },
+    {
+      "id": "ifrc-cruz-roja",
+      "name": "IFRC / Cruz Roja",
+      "categoryId": "monetary",
+      "description": {
+        "es": "Federación Internacional de la Cruz Roja y la Media Luna Roja, junto a la Cruz Roja Venezolana. Especialistas en primera respuesta: búsqueda y rescate, primeros auxilios, agua potable y refugios temporales.",
+        "en": "International Federation of Red Cross and Red Crescent, together with the Venezuelan Red Cross. Disaster first-response specialists: search & rescue, first aid, clean water and temporary shelters."
+      },
+      "url": "https://donate.redcrossredcrescent.org/ifrc/venezuela-earthquake/~my-donation",
+      "verified": true,
+      "verifiedSource": "https://www.ifrc.org/",
+      "region": "Internacional",
+      "featured": true
+    },
+    {
+      "id": "unicef",
+      "name": "UNICEF",
+      "categoryId": "monetary",
+      "description": {
+        "es": "Fondo de la ONU para la Infancia (canal gestionado por UNICEF Colombia para agilizar la ayuda regional). Protege a niñas, niños y embarazadas: kits de higiene, agua potable, nutrición y espacios seguros.",
+        "en": "UN Children's Fund (channel run by UNICEF Colombia to speed up regional aid). Protects children and pregnant women: hygiene kits, clean water, nutrition and safe spaces."
+      },
+      "url": "https://unicef.org.co/terremoto-venezuelav2",
+      "verified": true,
+      "verifiedSource": "https://www.unicef.org/",
+      "region": "Internacional",
+      "featured": false
+    },
+    {
+      "id": "givedirectly",
+      "name": "GiveDirectly",
+      "categoryId": "monetary",
+      "description": {
+        "es": "ONG internacional de transferencias directas de efectivo. Entrega el dinero sin condiciones a las familias afectadas para que compren lo que más necesitan y se reactive la economía local.",
+        "en": "International charity focused on direct cash transfers. Sends money unconditionally to affected families so they buy what they need most and help revive the local economy."
+      },
+      "url": "https://www.givedirectly.org/venezuela-earthquakes",
+      "verified": true,
+      "verifiedSource": "https://www.givedirectly.org/",
+      "region": "Internacional",
+      "featured": false
+    },
+    {
+      "id": "yummy-rides",
+      "name": "Yummy Rides",
+      "categoryId": "inkind",
+      "description": {
+        "es": "La mayor app venezolana de movilidad y delivery. Usa su flota para recoger donativos físicos (alimentos, medicinas, ropa) en casa del donante y llevarlos a los centros de acopio; también convierte aportes económicos en insumos.",
+        "en": "Venezuela's largest mobility & delivery app. Uses its fleet to pick up physical donations (food, medicine, clothing) from donors' homes and take them to collection centers; also turns cash into supplies."
+      },
+      "url": "https://dona.yummyrides.com/",
+      "verified": true,
+      "verifiedSource": "https://yummyrides.com/",
+      "region": "Venezuela",
+      "featured": true
+    },
+    {
+      "id": "globalgiving",
+      "name": "GlobalGiving",
+      "categoryId": "crowdfunding",
+      "description": {
+        "es": "Plataforma internacional de crowdfunding altamente auditada y transparente. Distribuye lo recaudado entre ONG locales venezolanas verificadas, apoyando rescate, refugio y reconstrucción a largo plazo.",
+        "en": "Highly vetted, transparent international crowdfunding platform. Distributes funds among verified local Venezuelan NGOs, supporting rescue, shelter and long-term reconstruction."
+      },
+      "url": "https://www.globalgiving.org/projects/venezuela-earthquake-relief-fund/",
+      "verified": true,
+      "verifiedSource": "https://www.globalgiving.org/",
+      "region": "Internacional",
+      "featured": false
+    }
+  ],
+  "ui": {
+    "defaultMode": "bar",
+    "defaultLang": "es",
+    "reshowAfterDays": 14,
+    "theme": {
+      "primary": "#7c3aed",
+      "primaryText": "#ffffff",
+      "accent": "#f59e0b"
+    }
+  }
+}
